@@ -34,6 +34,7 @@ class Time{
     public double Angle(int hour, int minute){
       double hourDegree = this.FindDegree(hour,12);
       double minuteDegree = this.FindDegree(minute,60);
+      hourDegree = hourDegree % 360;
       if(hourDegree > minuteDegree){
         return hourDegree - minuteDegree;
       } else {
